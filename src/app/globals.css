@@ -219,6 +219,99 @@ body {
   }
   
   
+  .bgsection4{
+    background-color: #001415;
+    position: relative;
+    overflow: hidden;
+    height: 150vh;
+  }
+
+
+  .blob4 {
+    position: absolute;
+    padding-top: 50px;
+    top: 320px;
+    bottom: 0;
+    left: 20px;
+    width: 944px;
+    height: 724px;
+    background-image: url('/assets/section4/Blob4.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  
+  .blob5 {
+    position: absolute;
+    top: 200px;
+    right: -140px;
+    width: 512px;
+    height: 393px;
+    background-image: url('/assets/section4/Blob5.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .bgsection5{
+    background-color: #001415;
+    position: relative;
+    overflow: hidden;
+    height: 160vh;
+  }
+  .blob6 {
+    position: absolute;
+    top: -50px;
+    left: 20px;
+    width: 814px;
+    height: 625px;
+    background-image: url('/assets/questions/Blob6.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  
+  .blob7 {
+    position: absolute;
+    bottom: 40px;
+    right: 10px;
+    width: 512px;
+    height: 393px;
+    background-image: url('/assets/questions/Blob7.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .bgsectionfooter{
+    background-color: #001415;
+    background-image: url('/footerbg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 145vh;
+    z-index: 1;
+  }
+
+  @keyframes rotateAnimation {
+    0%, 100% {
+      transform: rotate(20deg);
+    }
+    50% {
+      transform: rotate(-25deg);
+    }
+  }
+
+  .rotate-img {
+    animation: rotateAnimation 6s linear infinite;
+  }
+
+  .footer-border::after {
+    content: ""; /* Required for pseudo-elements */
+    position: absolute; /* Positioning relative to the footer-border */
+    right: 0; /* Align to the right side where the existing border is */
+    top: 50%; /* Starts from the middle of the div */
+    transform: translateY(-50%); /* Center it vertically */
+    height: 120%; /* Increase the height as needed */
+    width: 1px; /* Border width */
+    background-color: #ccc; /* Same color as the border */
+}
+
 
 @layer utilities {
   .text-balance {
