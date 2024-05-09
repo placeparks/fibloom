@@ -1,0 +1,227 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+/* Importing Ode SemiBold */
+@font-face {
+  font-family: 'Ode an Erik';
+  font-style: normal;
+  font-weight: 600; /* Semi-bold */
+  src: url('/fonts/ode_an_erik_ah/Ode-Erik.ttf') format('opentype');
+}
+
+.textOde {
+  font-family: 'Ode an Erik', sans-serif;
+  font-weight: 400;
+}
+
+.poppins-thin {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.poppins-extralight {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.poppins-extrabold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.poppins-black {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.poppins-thin-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.poppins-extralight-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.poppins-light-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.poppins-regular-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.poppins-medium-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.poppins-semibold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.poppins-bold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.poppins-extrabold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.poppins-black-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+body {
+
+  }
+
+  .bgsection1 {
+    background-image: url('/assets/section1/bgHero.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; /* cover might be better to maintain aspect ratio */
+    height: 130vh; /* Adjust height as necessary */
+    margin-top: -8%;
+  }
+
+
+  
+  /* Styling for the content */
+  .content {
+    z-index: 10;
+    color: white;
+    text-align: left;
+    padding-left: 10%; /* Adjust according to your layout */
+    max-width: 40%; /* Adjust according to your content size */
+  }
+  
+  /* Additional graphic */
+  .graphic {
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20%; /* Adjust based on the graphic size */
+  }
+  
+  .bgsection2 {
+    background-color: #001415;
+    position: relative;
+    overflow: hidden;
+    height: 150vh;
+  }
+  
+  .blob1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-bottom: 5%;
+    width: 944px;
+    height: 724px;
+    margin-bottom: 50px;
+    background-image: url('/assets/section2/Blob1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .blob2 {
+    position: absolute;
+    top: 700px;
+    bottom: -150px;
+    right: 0;
+    width: 512px;
+    height: 383px;
+    background-image: url('/assets/section2/Blob2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .blob3 {
+    position: absolute;
+    padding-top: 50px;
+    top: 750px;
+    bottom: 0;
+    left: -20px;
+    width: 550px;
+    height: 292px;
+    background-image: url('/assets/section2/Blob3.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
