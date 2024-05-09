@@ -1,13 +1,26 @@
-import React from 'react'
+import React from 'react';
 
-const ButtonFill = ({title}) => {
+const ButtonFill = ({ title, height, width, fontSize }) => {
+  const buttonStyle = {
+    height,
+    width,
+    fontSize,
+    backgroundColor: '#B58856',
+    color: '#D9D9D9',
+    borderRadius: '9999px', 
+    border: '4px solid transparent',
+    outline: '2px solid #B58856',
+    outlineOffset: '4px',
+    transition: 'transform 0.5s',
+  };
+
   return (
     <div>
-    <button className="h-[65px] w-[210px] text-[26px] textOde rounded-full border-4 border-transparent bg-[#B58856] text-[#D9D9D9] outline outline-offset-4 outline-2 outline-[#B58856] transform transition-transform duration-500 hover:scale-105 hover:text-[29px] relative overflow-hidden shadow-none hover:shadow-xl ">
-      {title}
-    </button>
-  </div>
-  )
+      <button style={buttonStyle} className="textOde hover:scale-105 hover:text-[29px] relative overflow-hidden shadow-none hover:shadow-xl">
+        {title}
+      </button>
+    </div>
+  );
 }
 
-export default ButtonFill
+export default ButtonFill;

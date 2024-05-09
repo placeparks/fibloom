@@ -15,7 +15,7 @@ const Section2 = () => {
               Enter a realm where numbers rule and imagination reigns. Join Cipher Sun in his battle against Nyx Ricinus to save reality. Explore themes of growth and order across cosmic dimensions. Dive into the infinite possibilities where math and imagination collide. Welcome to Cipher Sun Universe.
             </p>
             <a href="#" className="inline-flex items-center justify-center py-3 text-center">
-              <ButtonFill title='JOIN US' />
+              <ButtonFill title='JOIN US'height='65px' width='211px' fontSize='26px' />
             </a>
           </div>
           <div className="hidden lg:mt-0 lg:col-span-6 lg:flex">
