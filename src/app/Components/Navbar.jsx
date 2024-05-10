@@ -34,7 +34,7 @@ const Navbar = () => {
           <a href="#" class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 text-[20px]  dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">FAQs</a>
         </li>
         <li>
-                  <ButtonFill title='CONNECT'height='50px' width='180px' fontSize='20px' />
+                  <ButtonFill title='CONNECT'height='35px' width='120px' fontSize='20px' backgroundColor='#0c271e' outline='2px solid #0c271e' />
         </li>
       </ul>
     </div>

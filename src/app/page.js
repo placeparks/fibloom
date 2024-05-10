@@ -10,8 +10,8 @@ import Section4 from "./Components/Section4";
 export default function Home() {
   return (
     <div className="">
-      <Navbar />
-      <Section1 />
+        <Navbar />
+        <Section1 />
       <Section2 />
       <Section3/>
       <Section4/>

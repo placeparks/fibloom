@@ -159,14 +159,18 @@ body {
   }
 
   .bgsection1 {
-    background-image: url('/assets/section1/bgHero.png');
+    background-image: url('/assets/section1/PG.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover; 
-    height: 130vh; 
+    height: 100vh; 
   }
-
-
+  
+ 
+  .roadmap-img {
+    transform: scale(1.1); 
+  }
+  
   
   /* Styling for the content */
   .content {
@@ -193,6 +197,7 @@ body {
     position: relative;
     overflow: hidden;
     height: 150vh;
+    width: 100%;
   }
   
   
@@ -330,7 +335,7 @@ body {
 
 .vl {
   border-left: 0.5px solid #FFFFFF;
-  height: 425px;
+  height: 300px;
   margin-bottom: -5%;
 
 }

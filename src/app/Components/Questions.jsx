@@ -63,7 +63,7 @@ const Questions = () => {
                   />
                             
                                    <AccordionItem
-            question="On which blockchain NFTs will be minted on?"
+            question="On which blockchain NFTs will be minted?"
             answer="ZkSync"
                       />
                                       <AccordionItem

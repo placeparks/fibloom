@@ -4,10 +4,10 @@ import React from 'react'
 const Footer = () => {
   return (
       <div className='bgsectionfooter h-screen'>
-          <footer class="py-6 text-white bg-transparent z-10 pt-[38%]">
+          <footer class="py-6 text-white bg-transparent z-10 pt-[44%]">
           <div className='container mx-auto px-6'>
                 <div className='flex flex-wrap justify-between items-center'>
-                <div class=' w-full flex flex-col justify-center items-center md:w-1/4 mb-6 mr-2 md:mb-0'>
+                <div class=' w-full flex flex-col border-r justify-center items-center md:w-1/4 mb-6 mr-2 md:mb-0'>
                         <a href="#" className='flex items-center mb-4'>
                             <Image src='/assets/section1/FB.png' width={203.12} height={89} alt='Fibonacci Bloom' />
                         </a>
@@ -15,7 +15,7 @@ const Footer = () => {
                             In the mystical realm of Elysium, darkness is spreading, threatening to consume the once vibrant lands. As the chosen hero...
                         </p>
                       </div>
-                      <div className="vl"></div>
+                      <div className=""></div>
                     <div className='w-[228px] h-[191px] flex flex-col justify-start items-start'>
                         <h3 className='mb-3 text-xl poppins-extrabold'>THE PROJECT</h3>
                         <ul className='space-y-1 leading-[50px] '>
@@ -43,7 +43,7 @@ const Footer = () => {
                         </ul>
                     </div>
                 </div>
-                <div className='flex flex-row justify-end items-center gap-[350px] text-center text-sm'>
+                <div className='flex flex-row justify-end mt-24 items-center gap-[350px] text-center text-sm'>
                 <div className='flex justify-center space-x-4'>
                     <a href="#" className='hover:bg-gray-700 p-2 rounded-full'>
                     <svg width="34" height="33" viewBox="0 0 34 33" fill="none" xmlns="http://www.w3.org/2000/svg">
