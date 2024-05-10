@@ -23,7 +23,7 @@ const AccordionItem = ({ question, answer, isLast }) => {
           </button>
         </h2>
         <div
-          className={`p-5 w-3/5 text-center text-white  ${isOpen ? 'block' : 'hidden'}`}
+          className={`p-5 w-3/5 text-center text-[20px] poppins-regular text-white  ${isOpen ? 'block' : 'hidden'}`}
         >
           {answer}
         </div>
@@ -39,7 +39,7 @@ const Questions = () => {
    <div className='blob7'></div>
     <div className="relative my-24 mx-auto px-6 z-10">
 <section className="mb-32 flex flex-col items-center justify-center text-white">
- <h2 className="mb-6 text-[71px] textOde">FREQUENTLY ASKED QUESTIONS</h2>
+ <h2 className="mb-6 text-[70px] textOde">FREQUENTLY ASKED QUESTIONS</h2>
  <div>
           <AccordionItem
             question="What is the Fibonacci Bloom?"

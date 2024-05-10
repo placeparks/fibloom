@@ -3,8 +3,7 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -17,6 +16,20 @@
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
+}
+
+.red-hat-display-semibold {
+  font-family: "Red Hat Display", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.red-hat-display-regular {
+  font-family: "Red Hat Display", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* Importing Ode SemiBold */
@@ -141,6 +154,7 @@
 }
 
 body {
+  background-color: #001415;
 
   }
 
@@ -148,9 +162,8 @@ body {
     background-image: url('/assets/section1/bgHero.png');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover; /* cover might be better to maintain aspect ratio */
-    height: 130vh; /* Adjust height as necessary */
-    margin-top: -8%;
+    background-size: cover; 
+    height: 130vh; 
   }
 
 
@@ -175,10 +188,13 @@ body {
   
   .bgsection2 {
     background-color: #001415;
+    background-size: cover;
+    background-attachment: fixed;
     position: relative;
     overflow: hidden;
     height: 150vh;
   }
+  
   
   .blob1 {
     position: absolute;
@@ -302,16 +318,22 @@ body {
   }
 
   .footer-border::after {
-    content: ""; /* Required for pseudo-elements */
-    position: absolute; /* Positioning relative to the footer-border */
-    right: 0; /* Align to the right side where the existing border is */
-    top: 50%; /* Starts from the middle of the div */
-    transform: translateY(-50%); /* Center it vertically */
-    height: 120%; /* Increase the height as needed */
-    width: 1px; /* Border width */
-    background-color: #ccc; /* Same color as the border */
+    content: "";
+    position: absolute;
+    right: 0; 
+    top: 50%;
+    transform: translateY(-50%);
+    height: 120%;
+    width: 1px;
+    background-color: #ccc; 
 }
 
+.vl {
+  border-left: 0.5px solid #FFFFFF;
+  height: 425px;
+  margin-bottom: -5%;
+
+}
 
 @layer utilities {
   .text-balance {

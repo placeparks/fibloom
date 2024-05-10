@@ -3,18 +3,19 @@ import React from 'react'
 
 const Footer = () => {
   return (
-      <div className='bgsectionfooter h=screen'>
-          <footer class="py-6 text-white bg-transparent z-10 pt-[42%]">
+      <div className='bgsectionfooter h-screen'>
+          <footer class="py-6 text-white bg-transparent z-10 pt-[38%]">
           <div className='container mx-auto px-6'>
                 <div className='flex flex-wrap justify-between items-center'>
-                <div class=' w-full flex flex-col justify-center border-r border-gray-400 items-center md:w-1/4 mb-6 mr-2 md:mb-0'>
+                <div class=' w-full flex flex-col justify-center items-center md:w-1/4 mb-6 mr-2 md:mb-0'>
                         <a href="#" className='flex items-center mb-4'>
-                            <Image src='/assets/section1/FB.png' width={203} height={89} alt='Fibonacci Bloom' />
+                            <Image src='/assets/section1/FB.png' width={203.12} height={89} alt='Fibonacci Bloom' />
                         </a>
-                        <p className='text-sm mt-2 text-center w-[242px]'>
+                        <p className='red-hat-display-regular text-sm mt-2 text-center w-[242px]'>
                             In the mystical realm of Elysium, darkness is spreading, threatening to consume the once vibrant lands. As the chosen hero...
                         </p>
-                    </div>
+                      </div>
+                      <div className="vl"></div>
                     <div className='w-[228px] h-[191px] flex flex-col justify-start items-start'>
                         <h3 className='mb-3 text-xl poppins-extrabold'>THE PROJECT</h3>
                         <ul className='space-y-1 leading-[50px] '>
@@ -42,8 +43,8 @@ const Footer = () => {
                         </ul>
                     </div>
                 </div>
-                <div className='flex flex-row justify-end items-center pr-16 mt-16 gap-[360px] text-center text-sm mt-10'>
-                <div className='flex justify-center space-x-4 mt-4'>
+                <div className='flex flex-row justify-end items-center gap-[350px] text-center text-sm'>
+                <div className='flex justify-center space-x-4'>
                     <a href="#" className='hover:bg-gray-700 p-2 rounded-full'>
                     <svg width="34" height="33" viewBox="0 0 34 33" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M17 0C7.6075 0 2.48122e-06 7.5707 2.48122e-06 16.9178C-0.00192569 20.4693 1.11999 23.9312 3.20657 26.8124C5.29315 29.6936 8.23845 31.8478 11.6246 32.9693C12.4746 33.1165 12.7925 32.609 12.7925 32.164C12.7925 31.7631 12.7704 30.4317 12.7704 29.014C8.5 29.7973 7.395 27.9786 7.055 27.0261C6.8629 26.5389 6.035 25.0383 5.3125 24.6356C4.7175 24.3193 3.8675 23.536 5.2904 23.5157C6.63 23.4937 7.5854 24.7422 7.905 25.2498C9.435 27.8077 11.8796 27.0887 12.8554 26.6455C13.005 25.5458 13.4504 24.8065 13.94 24.3836C10.1575 23.9606 6.205 22.5006 6.205 16.0296C6.205 14.1889 6.8629 12.668 7.9475 11.4821C7.7775 11.0591 7.1825 9.32507 8.1175 6.99888C8.1175 6.99888 9.5404 6.55563 12.7925 8.73464C14.1764 8.3524 15.6063 8.16002 17.0425 8.16282C18.4875 8.16282 19.9325 8.3523 21.2925 8.73295C24.5429 6.53364 25.9675 7.00057 25.9675 7.00057C26.9025 9.32676 26.3075 11.0608 26.1375 11.4838C27.2204 12.668 27.88 14.1686 27.88 16.0296C27.88 22.5226 23.9071 23.9606 20.1246 24.3836C20.74 24.9114 21.2721 25.9265 21.2721 27.5134C21.2721 29.7753 21.25 31.5939 21.25 32.1657C21.25 32.609 21.5696 33.1368 22.4196 32.9676C25.7941 31.8338 28.7265 29.6754 30.8038 26.7963C32.8812 23.9172 33.999 20.4622 34 16.9178C34 7.5707 26.3925 0 17 0Z" fill="#CFCFCF"/>
