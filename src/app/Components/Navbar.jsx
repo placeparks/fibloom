@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import ButtonFill from './buttons/ButtonFill';
 import { Link } from 'react-scroll';
+import Image from 'next/image';
 
 const Navbar = () => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
@@ -15,7 +16,7 @@ const Navbar = () => {
       <nav className="relative bg-transparent flex items-center justify-between md:justify-center p-4">
         <div className="flex items-center justify-between w-full md:w-auto">
           <Link href="/" className="md:hidden">
-            <img src="/logo.png" className="h-[55px] w-[38.62px]" alt="Logo" />
+            <Image width={38.62} height={55} src="/logo.png" className="h-[55px] w-[38.62px]" alt="Logo" />
           </Link>
           <button
               onClick={toggleDropdownMenu}
@@ -49,7 +50,7 @@ const Navbar = () => {
             <li><Link to="about" smooth={true} duration={500} className="cursor-pointer py-2 px-3 text-white md:text-white dark:text-white">ABOUT US</Link></li>
             <li><Link to="roadmap" smooth={true} duration={500} className="cursor-pointer py-2 px-3 text-white md:text-white dark:text-white">ROADMAP</Link></li>
             <Link href="#" className="md:flex hidden items-center space-x-3">
-              <img src="/logo.png" className="h-[86.19px] w-[53.62px]" alt="Logo" />
+              <Image width={53.62} height={86.19} src="/logo.png" className="h-[86.19px] w-[53.62px]" alt="Logo" />
             </Link>
             <li><Link to="dashboard" smooth={true} duration={500} className="cursor-pointer py-2 px-3 text-white md:text-white dark:text-white">DASHBOARD</Link></li>
             <li><Link to="questions" smooth={true} duration={500} className="cursor-pointer py-2 px-3 text-white md:text-white dark:text-white">FAQs</Link></li>

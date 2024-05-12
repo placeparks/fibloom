@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import ButtonFill from './buttons/ButtonFill';
 
 
@@ -20,7 +21,7 @@ const Section2 = () => {
               </a>
             </div>
             <div className="lg:mt-0 lg:col-span-6 lg:flex">
-              <img src="/assets/section2/Component1.png" className=' md:h-[840px] w-[700px] rotate-img' alt="mockup" />
+              <Image height={840} width={700} src="/assets/section2/Component1.png" className=' md:h-[840px] w-[700px] rotate-img' alt="mockup" />
             </div>
           </div>
         </section>
