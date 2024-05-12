@@ -11,7 +11,11 @@ const Video = () => {
   const [isMuted, setIsMuted] = useState(true); // Manage mute state
   const [scale, setScale] = useState(0.5); // Initial scale when not scrolled
 
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> 9734f186094501af0cca0033e62adb53056f9396
   useEffect(() => {
     const videoElement = videoRef.current;  // Capture the current value
 
