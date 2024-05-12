@@ -11,28 +11,31 @@ const Video = () => {
   const [isMuted, setIsMuted] = useState(true); // Manage mute state
   const [scale, setScale] = useState(0.5); // Initial scale when not scrolled
 
+  
   useEffect(() => {
+    const videoElement = videoRef.current;  // Capture the current value
+
     observerRef.current = new IntersectionObserver((entries) => {
-      const video = videoRef.current;
-      if (entries[0].isIntersecting) {
-        video.play().catch(() => {
-          // Handle the case where autoplay was prevented
-        });
-      } else {
-        video.pause();
-      }
+        if (entries[0].isIntersecting) {
+            videoElement.play().catch(() => {
+                // Handle the case where autoplay was prevented
+            });
+        } else {
+            videoElement.pause();
+        }
     }, { threshold: 0.5 });
 
-    if (videoRef.current) {
-      observerRef.current.observe(videoRef.current);
+    if (videoElement) {
+        observerRef.current.observe(videoElement);
     }
 
     return () => {
-      if (observerRef.current && videoRef.current) {
-        observerRef.current.unobserve(videoRef.current);
-      }
+        if (observerRef.current && videoElement) {
+            observerRef.current.unobserve(videoElement);
+        }
     };
-  }, []);
+}, []);
+
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -45,6 +48,7 @@ const Video = () => {
       });
     }
   }, [scrollY]);
+  
 
   const toggleMute = () => {
     const video = videoRef.current;
