@@ -8,7 +8,8 @@ const Section1 = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY;
+      if (typeof window !== "undefined") {
+        const scrollPosition = window.scrollY;
       const screenHeight = window.innerHeight;
       if (scrollPosition >= screenHeight / 4) {
         setBlur(true);
@@ -16,6 +17,8 @@ const Section1 = () => {
         setBlur(false);
       }
     };
+      }
+      
 
     window.addEventListener('scroll', handleScroll);
 

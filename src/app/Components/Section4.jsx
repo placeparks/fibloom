@@ -11,8 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Section4 = () => {
   const { scrollY } = useViewportScroll();
-  const [scale, setScale] = useState(0.5); 
-  const [hover, setHover] = useState(false);
+  const [scale, setScale] = useState(typeof window !== 'undefined' ? (window.innerWidth < 768 ? 0.5 : 0.1) : 0.1);  const [hover, setHover] = useState(false);
 
   const glowStyle = {
     boxShadow: hover ? '0 2px 10px 2px #E4E4E4' : 'none', 
@@ -51,16 +50,14 @@ const Section4 = () => {
   
 
   useEffect(() => {
-    const handleResize = () => {
-      // Set initial scale based on screen width when component mounts or screen resizes
-      const isMobile = window.innerWidth < 768; // Example breakpoint for mobile
-      setScale(isMobile ? 0.5 : 0.1);
-    };
+    if (typeof window !== 'undefined') {
+      const handleResize = () => {
+        const isMobile = window.innerWidth < 768;
+        setScale(isMobile ? 0.5 : 0.1);
+      };
 
-    // Add event listener for window resize
-    window.addEventListener('resize', handleResize);
-    // Call handleResize initially to set the scale based on the current window size
-    handleResize();
+      window.addEventListener('resize', handleResize);
+      handleResize();
 
     const unsubscribeY = scrollY.onChange((value) => {
       const screenHeight = window.innerHeight;
@@ -75,10 +72,12 @@ const Section4 = () => {
     });
 
     return () => {
-      unsubscribeY();
-      window.removeEventListener('resize', handleResize);
-    };
+        unsubscribeY();
+        window.removeEventListener('resize', handleResize);
+      };
+    }
   }, [scrollY]);
+  
   return (
     <div className='bgsection4 mt-32'>
     <div className='blob4 hidden md:block'></div>
