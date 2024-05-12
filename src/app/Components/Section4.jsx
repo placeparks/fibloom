@@ -80,7 +80,7 @@ const Section4 = () => {
   }, [scrollY]);
 
   return (
-    <div className='bgsection4 mt-32'>
+    <div className='bgsection4 md:mt-32 mt-[-35%]'>
     <div className='blob4 hidden md:block'></div>
     <div className='blob5 hidden md:block'></div>
 

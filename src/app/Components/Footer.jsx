@@ -3,11 +3,11 @@ import React from 'react';
 import Link from 'next/link';
 const Footer = () => {
   return (
-      <div className='bgsectionfooter h-screen'>
-          <footer class="py-6 text-white bg-transparent z-10 pt-0 mt-[-9rem] md:mt0 md:pt-[44%]">
+      <div className='bgsectionfooter h-screen mt-[-110%] md:mt-0'>
+          <footer class="py-6 text-white bg-transparent z-10 pt-0 md:pt-[44%]">
           <div className='container mx-auto px-6'>
                 <div className='flex flex-wrap justify-left md:justify-between items-left md:items-center'>
-                <div class=' w-full flex flex-col md:border-r md:mt-0 mt-[570px] justify-left items-left md:justify-center md:items-center md:w-1/4 mb-6 mr-2 md:mb-0'>
+                <div class=' w-full flex flex-col md:border-r md:mt-0 mt-[700px] justify-left items-left md:justify-center md:items-center md:w-1/4 mb-6 mr-2 md:mb-0'>
                         <Link href="#" className='flex items-center mb-4'>
                             <Image src='/assets/section1/FB.png' width={203.12} height={89} alt='Fibonacci Bloom' />
                         </Link>

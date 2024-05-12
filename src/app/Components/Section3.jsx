@@ -37,7 +37,7 @@ const Section3 = () => {
   }, [scrollY]);
 
   return (
-    <div className='min-h-screen bg-fixed flex flex-col justify-center items-center bg-[#001415]'>
+    <div className='mt-[-35%] md:mt-0 min-h-screen bg-fixed flex flex-col justify-center items-center bg-[#001415]'>
       <div style={{ transform: `scale(${scale})`, transition: 'transform 0.5s ease-out' }}>
         <Image
           src='/assets/section3/Roadmap.png'

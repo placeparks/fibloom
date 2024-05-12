@@ -60,7 +60,7 @@ const Video = () => {
   };
 
   return (
-      <div className='flex justify-center'>
+      <div className='flex justify-center mt-[-35%] md:mt-0'>
           <div style={{ transform: `scale(${scale})` }}>
               <video ref={videoRef} autoPlay loop playsInline muted={isMuted} className='h-full md:h-[1000px]'>
                 <source src='/assets/videos/keys.mp4' type="video/mp4" />

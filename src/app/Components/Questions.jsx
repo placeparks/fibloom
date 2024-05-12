@@ -11,7 +11,7 @@ const AccordionItem = ({ question, answer, isLast }) => {
   
     return (
       <>
-       <h2 className="mb-0">
+       <h2 className="mb-0 ">
         <button
           className="flex items-center justify-between w-full p-5 text-left text-white text-2xl md:text-[35px] textOde bg-transparent"
           onClick={toggleAccordion}
@@ -40,7 +40,7 @@ const AccordionItem = ({ question, answer, isLast }) => {
 
 const Questions = () => {
   return (
-    <div className='bgsection5 mt-[-450px] md:mt-0 relative md:p-12'>
+    <div className='bgsection5 mt-[-200%] md:mt-0 relative md:p-12'>
     <div className='blob6 hidden md:block'></div>
    <div className='blob7 hidden md:block'></div>
     <div className="relative my-24 mx-auto px-6 z-10">
