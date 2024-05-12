@@ -2,20 +2,27 @@
 import React, { useState, useEffect } from 'react';
 
 const ButtonFill = ({ title, height, width, fontSize, outline, backgroundColor, glowColor }) => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  // Initialize isMobile with a default value (false)
+  const [isMobile, setIsMobile] = useState(false);
 
-    useEffect(() => {
-      if (typeof window !== 'undefined') {
-          const handleResize = () => {
-              setIsMobile(window.innerWidth < 768);
-          };
-  
-          window.addEventListener('resize', handleResize);
-          return () => window.removeEventListener('resize', handleResize);
-      }
+  useEffect(() => {
+    // This check ensures window is defined before accessing it
+    if (typeof window !== 'undefined') {
+      const handleResize = () => {
+        setIsMobile(window.innerWidth < 768);
+      };
+      
+      // Set the initial state based on the window size
+      handleResize();
+      
+      // Set up the event listener for resizing
+      window.addEventListener('resize', handleResize);
+      
+      // Clean up the event listener when the component unmounts
+      return () => window.removeEventListener('resize', handleResize);
+    }
   }, []);
   
-
   const mobileStyle = {
     height: '40px',  // Example mobile height
     width: '120px',  // Example mobile width
@@ -43,7 +50,7 @@ const ButtonFill = ({ title, height, width, fontSize, outline, backgroundColor, 
   const [hover, setHover] = useState(false);
 
   const glowStyle = {
-    boxShadow: hover ? `0px 0px 7px 2px ${glowColor}`: 'none',
+    boxShadow: hover ? `0px 0px 7px 2px ${glowColor}` : 'none',
     transition: 'box-shadow 0.5s, transform 0.5s',
   };
 

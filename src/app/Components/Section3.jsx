@@ -10,6 +10,7 @@ const Section3 = () => {
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
+      
       const handleResize = () => {
         const isMobile = window.innerWidth < 768;
         setScale(isMobile ? 0.5 : 0.1);

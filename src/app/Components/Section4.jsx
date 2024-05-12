@@ -51,6 +51,7 @@ const Section4 = () => {
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
+
       const handleResize = () => {
         const isMobile = window.innerWidth < 768;
         setScale(isMobile ? 0.5 : 0.1);
@@ -77,7 +78,7 @@ const Section4 = () => {
       };
     }
   }, [scrollY]);
-  
+
   return (
     <div className='bgsection4 mt-32'>
     <div className='blob4 hidden md:block'></div>
