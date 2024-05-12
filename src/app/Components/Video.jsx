@@ -35,13 +35,15 @@ const Video = () => {
   }, []);
 
   useEffect(() => {
-    return scrollY.onChange((value) => {
-      const screenHeight = window.innerHeight;
-      const docHeight = document.body.offsetHeight;
-      const scrolled = value / (docHeight - screenHeight);
-      const dynamicScale = 0.5 + (scrolled * (1 - 0.5));
-      setScale(scrolled > 0.8 ? 1.0 : dynamicScale);
-    });
+    if (typeof window !== "undefined") {
+      return scrollY.onChange((value) => {
+        const screenHeight = window.innerHeight;
+        const docHeight = document.body.offsetHeight;
+        const scrolled = value / (docHeight - screenHeight);
+        const dynamicScale = 0.5 + (scrolled * (1 - 0.5));
+        setScale(scrolled > 0.8 ? 1.0 : dynamicScale);
+      });
+    }
   }, [scrollY]);
 
   const toggleMute = () => {
