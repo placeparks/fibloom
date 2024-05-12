@@ -8,39 +8,45 @@ const AccordionItem = ({ question, answer, isLast }) => {
       setIsOpen(!isOpen);
     };
   
-    const borderStyle = isLast ? '' : 'border-b border-b-1 border-[#535959]';
   
     return (
-      <div className='flex flex-col items-center justify-center'>
-        <h2 className={`mb-0 w-[804.01px] ${borderStyle}`}>
-  
-          <button
-                    className={`flex items-center justify-center w-full p-5 text-center text-[35px] text-white textOde z-10`}
-            onClick={toggleAccordion}
-          >
-            {question}
-        
-          </button>
-        </h2>
-        <div
-          className={`p-5 w-3/5 text-center text-[20px] poppins-regular text-white  ${isOpen ? 'block' : 'hidden'}`}
+      <>
+       <h2 className="mb-0">
+        <button
+          className="flex items-center justify-between w-full p-5 text-left text-white text-2xl md:text-[35px] textOde bg-transparent"
+          onClick={toggleAccordion}
         >
-          {answer}
-        </div>
+          {question}
+          <svg
+            className={`w-6 h-6 transform transition-transform ${isOpen ? 'rotate-180' : ''}`}
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+          </svg>
+        </button>
+      </h2>
+      <div
+        className={`p-5 text-white text-base poppins-regular ${isOpen ? 'block' : 'hidden'}`}
+      >
+        {answer}
       </div>
+
+      </>
     );
   };
   
 
 const Questions = () => {
   return (
-    <div className='bgsection5 relative'>
-    <div className='blob6'></div>
-   <div className='blob7'></div>
+    <div className='bgsection5 mt-[-450px] md:mt-0 relative md:p-12'>
+    <div className='blob6 hidden md:block'></div>
+   <div className='blob7 hidden md:block'></div>
     <div className="relative my-24 mx-auto px-6 z-10">
-<section className="mb-32 flex flex-col items-center justify-center text-white">
- <h2 className="mb-6 text-[70px] textOde">FREQUENTLY ASKED QUESTIONS</h2>
- <div>
+    <section className="mb-32 text-white">
+        <h2 className="mb-6 text-3xl md:text-[70px] ml-4 md:ml-4 textOde">FREQUENTLY ASKED QUESTIONS</h2>
+        <div>
           <AccordionItem
             question="What is the Fibonacci Bloom?"
             answer="Fibonacci Bloom is a unique NFT collection inspired by the intertwining of art and the Fibonacci sequence, represented through the digital art character, Cipher Sun."
@@ -56,24 +62,26 @@ const Questions = () => {
                          <AccordionItem
             question="Is a Fibonacci Bloom NFT a financial investment?"
             answer="No, the Fibonacci Bloom NFTs are for artistic and entertainment purposes and should not be considered an investment vehicle."
-                      />
-                                                <AccordionItem
-            question="Who should I contact in case of any query?"
-            answer="dev@mirac.live"
                   />
-                            
+                                   <AccordionItem
+            question="How can I participate in the Moody NFT raffle?"
+            answer="NFT holders will automatically be eligible for the raffle. Specific details will be provided to NFT holders."
+                  />
+                                   <AccordionItem
+            question="Who holds the rights to the Fibonacci Bloom collection?"
+            answer="All rights are reserved by mirac.eth, the creator and curator of the collection."
+                  />
                                    <AccordionItem
             question="On which blockchain NFTs will be minted?"
             answer="ZkSync"
-                      />
-                                      <AccordionItem
-            question="How can I participate in the Moody NFT raffle?"
-            answer="NFT holders will automatically be eligible for the raffle. Specific details will be provided to NFT holders."
-            isLast={true}  
-                      />
-         
+                  />
+                                   <AccordionItem
+            question="Who should I contact in case of any query?"
+            answer="dev@mirac.live"
+                  />
         </div>
       </section>
+
     </div>
    </div>
   );

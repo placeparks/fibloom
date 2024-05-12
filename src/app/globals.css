@@ -10,6 +10,11 @@
   --background-end-rgb: 255, 255, 255;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -162,8 +167,10 @@ body {
     background-image: url('/assets/section1/PG.png');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover; 
-    height: 100vh; 
+  }
+  
+  .blur-effect {
+    filter: blur(7px); /* Adjust blur amount as necessary */
   }
   
  
@@ -345,3 +352,4 @@ body {
     text-wrap: balance;
   }
 }
+

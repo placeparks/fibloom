@@ -22,60 +22,80 @@ const Section4 = () => {
   const buttonRef = useRef(null);
 
   useEffect(() => {
-    // Ensure the element exists and is not null
     if (buttonRef.current) {
-      gsap.fromTo(buttonRef.current, 
+      console.log("Animating element:", buttonRef.current);
+  
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: buttonRef.current,
+          start: "top bottom", 
+          end: "top center",   
+          toggleActions: 'play none none none',
+        }
+      });
+  
+      tl.fromTo(buttonRef.current, 
         { autoAlpha: 0, y: 40 }, 
         {
-          duration: 1,
-          delay: 0.3,
           autoAlpha: 1,
           y: 0,
-          ease: 'power1.inOut',
-          scrollTrigger: {
-            trigger: buttonRef.current,
-            start: "top bottom+=200", 
-            end: "center center",
-            toggleActions: 'play none none none',
-          }
+          duration: 1,
+          delay: 0.3,
+          ease: "power1.inOut",
         });
+  
+    } else {
+      console.error("Ref is not attached to an element.");
     }
   }, []);
-
-
+  
 
   useEffect(() => {
+    const handleResize = () => {
+      // Set initial scale based on screen width when component mounts or screen resizes
+      const isMobile = window.innerWidth < 768; // Example breakpoint for mobile
+      setScale(isMobile ? 0.5 : 0.1);
+    };
+
+    // Add event listener for window resize
+    window.addEventListener('resize', handleResize);
+    // Call handleResize initially to set the scale based on the current window size
+    handleResize();
+
     const unsubscribeY = scrollY.onChange((value) => {
       const screenHeight = window.innerHeight;
       const docHeight = document.body.offsetHeight;
       const scrolled = value / (docHeight - screenHeight);
-      const dynamicScale = 0.5 + (scrolled * (1 - 0.5));
 
-      // Set scale to 1.0 if the scroll percentage is above 80%
-      if (scrolled > 0.8) {
-        setScale(1.0);
-      } else {
-        setScale(dynamicScale);
-      }
+      // Adjust scaling based on whether it's mobile or not
+      const isMobile = window.innerWidth < 768;
+      const dynamicScale = isMobile ? (0.5 + (scrolled * 1.2)) : (0.1 + (scrolled * 1.50));
+
+      setScale(dynamicScale);
     });
 
-    return () => unsubscribeY();
+    return () => {
+      unsubscribeY();
+      window.removeEventListener('resize', handleResize);
+    };
   }, [scrollY]);
   return (
-    <div className='bgsection4'>
-    <div className='blob4'></div>
-    <div className='blob5'></div>
+    <div className='bgsection4 mt-32'>
+    <div className='blob4 hidden md:block'></div>
+    <div className='blob5 hidden md:block'></div>
 
       <div className='relative flex justify-center items-center z-10'>
       <div style={{ transform: `scale(${scale})` }}>
-        <Image src='/assets/section4/Paper.png' width={1496} height={1064} alt='' />
+        <Image src='/assets/section4/Paper.png' width={1440} height={1024} alt='' 
+  layout="responsive"  
+  className='w-[100vw] md:w-[1440px] h-auto md:h-[1024px]' />
         <div className="absolute" style={{ top: '45%', left: '50%', transform: 'translate(-50%, -50%)' }}>
-            <div className="flex items-center flex-col space-y-60">  
-                <h1 className='textOde text-[#001415] text-[95.01px]'>DASHBOARD</h1>
+            <div className="flex items-center flex-col space-y-[35px] md:space-y-60">  
+                <h1 className='textOde text-[#001415] text-[35px] md:text-[95.01px]'>DASHBOARD</h1>
                 <button
         ref={buttonRef}
         id='btn'
-        className="h-[65px] w-[211px] text-[26px] textOde rounded-full border-4 border-[#D9D9D9] bg-[#282828] text-[#D9D9D9] outline outline-offset-2 outline-1 outline-[#282828] transform transition-transform duration-500 hover:scale-105 hover:text-[29px] relative overflow-hidden shadow-none hover:shadow-xl opacity-0"
+        className=" h-[30px] w-[120px] md:h-[65px] md:w-[211px] md:text-[26px] textOde rounded-full border-2 md:border-4 border-[#D9D9D9] bg-[#282828] text-[#D9D9D9] outline outline-offset-1 md:outline-offset-2 outline-1 outline-[#282828] transform transition-transform duration-500 hover:scale-105 hover:text-[29px] relative overflow-hidden shadow-none hover:shadow-xl opacity-0"
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
         style={glowStyle} 

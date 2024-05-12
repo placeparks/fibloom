@@ -4,46 +4,43 @@ import React from 'react'
 const Footer = () => {
   return (
       <div className='bgsectionfooter h-screen'>
-          <footer class="py-6 text-white bg-transparent z-10 pt-[44%]">
+          <footer class="py-6 text-white bg-transparent z-10 pt-0 mt-[-9rem] md:mt0 md:pt-[44%]">
           <div className='container mx-auto px-6'>
-                <div className='flex flex-wrap justify-between items-center'>
-                <div class=' w-full flex flex-col border-r justify-center items-center md:w-1/4 mb-6 mr-2 md:mb-0'>
+                <div className='flex flex-wrap justify-left md:justify-between items-left md:items-center'>
+                <div class=' w-full flex flex-col md:border-r md:mt-0 mt-[570px] justify-left items-left md:justify-center md:items-center md:w-1/4 mb-6 mr-2 md:mb-0'>
                         <a href="#" className='flex items-center mb-4'>
                             <Image src='/assets/section1/FB.png' width={203.12} height={89} alt='Fibonacci Bloom' />
                         </a>
-                        <p className='red-hat-display-regular text-sm mt-2 text-center w-[242px]'>
-                            In the mystical realm of Elysium, darkness is spreading, threatening to consume the once vibrant lands. As the chosen hero...
-                        </p>
+                        <p className='red-hat-display-regular text-sm mt-2 text-left md:text-center w-[242px]'>
+                        In the mystical realm of Elysium, darkness is spreading, threatening to consume the once vibrant lands. As the chosen hero                        </p>
                       </div>
                       <div className=""></div>
-                    <div className='w-[228px] h-[191px] flex flex-col justify-start items-start'>
+                    <div className='w-[228px] h-[191px] flex flex-col justify-start items-start mt-2 md:mt-0'>
                         <h3 className='mb-3 text-xl poppins-extrabold'>THE PROJECT</h3>
-                        <ul className='space-y-1 leading-[50px] '>
-                            <li><a href="#" className='hover:text-gray-400 text-base poppins-light'>GAME</a></li>
-                            <li><a href="#" className='hover:text-gray-400 text-base poppins-light'>ROADMAP</a></li>
-                            <li><a href="#" className='hover:text-gray-400 text-base poppins-light'>NFT MINT</a></li>
+                        <ul className='space-y-1 leading-[30px] md:leading-[50px] '>
+                            <li><a href="#" className='hover:text-gray-400 text-base poppins-light'>Game</a></li>
+                            <li><a href="#" className='hover:text-gray-400 text-base poppins-light'>Roadmap</a></li>
+                            <li><a href="#" className='hover:text-gray-400 text-base poppins-light'>NFT Mint</a></li>
                         </ul>
                     </div>
                     <div className='w-[228px] h-[191px] flex flex-col justify-start items-start'>
                         <h3 className='text-xl poppins-extrabold mb-3'>LEGAL STUFF</h3>
-                        <ul className='space-y-1 leading-[50px] '>
-                            <li><a href="#" className='hover:text-gray-400 text-base poppins-light'>TERMS & CONDITIONS</a></li>
-                            <li><a href="#" className='hover:text-gray-400 text-base poppins-light'>PRIVACY POLICY</a></li>
-                            <li><a href="#" className='hover:text-gray-400 text-base poppins-light'>FAQ & SUPPORT</a></li>
-                            <li><a href="#" className='hover:text-gray-400 text-base poppins-light'>CONTACT</a></li>
+                        <ul className='space-y-1 md:leading-[50px]  '>
+                            <li><a href="#" className='hover:text-gray-400 text-base poppins-light'>Terms & Conditions</a></li>
+                            <li><a href="#" className='hover:text-gray-400 text-base poppins-light'>Privacy Policy</a></li>
+                            <li><a href="#" className='hover:text-gray-400 text-base poppins-light'>FAQ & Support</a></li>
                         </ul>
                     </div>
                     <div className='w-[228px] h-[191px] flex flex-col justify-start items-start'>
                         <h3 className='text-xl poppins-extrabold mb-3'>MORE STUFF</h3>
-                        <ul className='space-y-1 leading-[50px]'>
-                            <li><a href="#" className='hover:text-gray-400 text-base poppins-light'>MARKETPLACE</a></li>
-                            <li><a href="#" className='hover:text-gray-400 text-base poppins-light'>WHITEPAPPER</a></li>
-                            <li><a href="#" className='hover:text-gray-400 text-base poppins-light'>AUCTION TERMS</a></li>
-                            <li><a href="#" className='hover:text-gray-400 text-base poppins-light'>NETWORK</a></li>
+                        <ul className='space-y-1 md:leading-[50px] '>
+                            <li><a href="#" className='hover:text-gray-400 text-base poppins-light'>Marketplace</a></li>
+                            <li><a href="#" className='hover:text-gray-400 text-base poppins-light'>Whitepaper</a></li>
+                            <li><a href="#" className='hover:text-gray-400 text-base poppins-light'>Auction Terms</a></li>
                         </ul>
                     </div>
                 </div>
-                <div className='flex flex-row justify-end mt-24 items-center gap-[350px] text-center text-sm'>
+                <div className='flex flex-col md:flex-row justify-end md:mt-24 items-center gap-8 md:gap-[350px] text-center text-sm'>
                 <div className='flex justify-center space-x-4'>
                     <a href="#" className='hover:bg-gray-700 p-2 rounded-full'>
                     <svg width="34" height="33" viewBox="0 0 34 33" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -64,7 +61,7 @@ const Footer = () => {
 </svg>
             </a>
                       </div>
-                  <p className='text-[14px] w-[297px] text-left'>
+                  <p className='text-[14px] w-[297px] text-center md:text-left'>
                   Copyright ©2024, Fibonacci Bloom. All rights reserved.                
                       </p>
                       </div>
