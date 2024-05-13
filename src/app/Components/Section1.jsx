@@ -29,7 +29,7 @@ const Section1 = () => {
   }, []);
 
   return (
-    <div className={`h-[90vh] bg-contain md:bg-cover bgsection1 bg-fixed flex flex-col justify-center items-center gap-4 md:gap-10 ${blur ? 'blur-effect' : ''}`}>
+    <div className={`h-[90vh] md:h-[100vh] bg-contain md:bg-cover bgsection1 bg-fixed flex flex-col justify-center items-center gap-4 md:gap-10 ${blur ? 'blur-effect' : ''}`}>
         <Image src='/assets/section1/FB.png' width={491} height={215} alt='' className='md:h-[215px] md:w-[491px] h-[80px] w-[160px]'/>
        <Button title='JOIN US' />
     </div>
