@@ -5,10 +5,10 @@ import ButtonFill from './buttons/ButtonFill';
 
 const Section2 = () => {
   return (
-    <div className='bgsection2 bg-fixed overflow-y-scroll bg-cover bg-local'>
+    <div className='bgsection2 md:h-[150vh] bg-fixed overflow-y-scroll bg-cover bg-local'>
         <div className='blob1'></div>
-        <div className='blob2'></div>
-      <div className='blob3'></div>
+        <div className='blob2 hidden md:block'></div>
+      <div className='blob3 hidden md:block'></div>
 
         <section id='about' className="relative z-10 mt-0 p-4 md:p-0 md:mt-[-1rem] ">
           <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">

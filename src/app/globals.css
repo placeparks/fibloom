@@ -203,7 +203,6 @@ body {
     background-attachment: fixed;
     position: relative;
     overflow: hidden;
-    height: 150vh;
     width: 100%;
   }
   
@@ -251,7 +250,6 @@ body {
     background-color: #001415;
     position: relative;
     overflow: hidden;
-    height: 150vh;
   }
 
 

@@ -40,7 +40,7 @@ const AccordionItem = ({ question, answer, isLast }) => {
 
 const Questions = () => {
   return (
-    <div className='bgsection5 mt-[-200%] md:mt-0 relative md:p-12'>
+    <div className='bgsection5 mt-32 md:mt-0 relative md:p-12'>
     <div className='blob6 hidden md:block'></div>
    <div className='blob7 hidden md:block'></div>
     <div className="relative my-24 mx-auto px-6 z-10">
